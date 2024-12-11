@@ -1,0 +1,154 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #F0F8FF;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(101, 86, 120, 1) 46%, rgba(6, 50, 59, 1) 100%);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Chat Area Styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+}
+.container-fluid{
+  height: 90vh !important;
+
+}
+.scrollable-area {
+  flex-grow: 1;
+  overflow-y: auto; /* Allows scroll inside chat area */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  max-height: 70vh; /* Limits height of scrollable area */
+}
+
+/* Message Bubble Styles */
+.message {
+  max-width: 75%; /* Prevents message from being too wide */
+  word-wrap: break-word;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: block;
+  clear: both;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  text-align: left;
+  padding: 10px 15px;
+  float: right; /* Aligns to the right */
+  margin-right: 10px;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #f1f0f0;
+  text-align: left;
+  padding: 10px 15px;
+  float: left; /* Aligns to the left */
+  margin-left: 10px;
+}
+
+.message-content {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.table th {
+  font-size: 11px !important;
+   padding: auto !important;
+}
+.table td {
+  font-size: 11px !important;
+   padding: auto !important;
+}
+.alert {
+  font-size: 13px !important;
+}
+/* Input Form Styles */
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+select, input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  flex: 1;
+  margin: 5px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(101, 86, 120, 1) 46%, rgba(6, 50, 59, 1) 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(81, 66, 100, 1) 46%, rgba(5, 40, 49, 1) 100%);
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+  .input-group {
+      flex-direction: row;
+  }
+  .input-group select,
+  .input-group input[type="text"] {
+      margin-bottom: 0;
+  }
+  .input-group .btn {
+      margin-left: 5px;
+  }
+}
+
+/* Pulse Animation for Voice Button */
+.pulse {
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
